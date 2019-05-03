@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="iranOpenDataV2" compareModeInSync="TIMESTAMP">
+    <serverData>
+      <paths name="iranOpenDataV2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/out/artifacts/iranopendatav2_war_exploded" web="/iranopendata" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

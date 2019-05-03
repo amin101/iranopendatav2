@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <!-- List files in /ws-definitions -->
+        <servlet-name>ListWsDefinitions</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>100</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListWsDefinitions</servlet-name>
+        <url-pattern>/outputdata/*</url-pattern>
+    </servlet-mapping>
+
+    <display-name>Iran OpenData Application</display-name>
+    <servlet>
+        <servlet-name>ServletCreateRDF</servlet-name>
+        <servlet-class>ServletCreateRDF</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletCreateRDF</servlet-name>
+        <url-pattern>/createrdf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletQueryOntology</servlet-name>
+        <servlet-class>ServletQueryOntology</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletQueryOntology</servlet-name>
+        <url-pattern>/queryontology</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletQueryOntologyOwlApi</servlet-name>
+        <servlet-class>ServletQueryOntologyOwlApi</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletQueryOntologyOwlApi</servlet-name>
+        <url-pattern>/queryontologyowlapi</url-pattern>
+    </servlet-mapping>
+</web-app>

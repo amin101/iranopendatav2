@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e86fe1ee-3a19-4f84-b9ee-af1ba0a5f0f0" name="iranOpenDataV2" url="http://188.40.177.145">
+        <fileTransfer host="188.40.177.145" port="22" rootFolder="/iranopendata" accessType="SFTP" password="dfeadfc7dfcbdfd9dfdfdfc7dfc3dfea" username="masumi">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

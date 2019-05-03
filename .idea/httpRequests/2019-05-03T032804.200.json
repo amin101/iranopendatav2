@@ -1,0 +1,28 @@
+{
+  "http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      "\u003chttp://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase\u003e": [
+        [
+          "\u003chttp://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase\u003e"
+        ]
+      ]
+    },
+    {
+      "\u003chttp://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping\u003e": [
+        [
+          "\u003chttp://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping\u003e"
+        ],
+        [
+          "\u003chttp://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping\u003e"
+        ]
+      ]
+    }
+  ]
+}

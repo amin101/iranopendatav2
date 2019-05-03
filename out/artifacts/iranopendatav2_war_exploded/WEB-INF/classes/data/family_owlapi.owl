@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-45="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasAccessType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasAccessType">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasTestAxiom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasTestAxiom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_address">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_age">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_family -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_family">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_name">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protected</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superAccessTypeClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#bb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#bb"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#family"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#sp2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#sp2">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_address"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#subAccessTypeClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#subAccessTypeClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superAccessTypeClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superAccessTypeClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#bb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#sp2"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_age"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#test -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#test">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superTest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasTestAxiom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#bb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasAccessType"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#ali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#amin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#amin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#family"/>
+        <has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#privatre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#privatre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#protected -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#protected">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#public -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#public">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#AccessTyepsClass"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#test"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

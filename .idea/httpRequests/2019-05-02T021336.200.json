@@ -1,0 +1,19 @@
+{
+  "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasAccessType\u003e": [
+    "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#public\u003e",
+    "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#privatre\u003e",
+    "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#protected\u003e"
+  ],
+  "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_age\u003e": [
+    "xsd:int"
+  ],
+  "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_name\u003e": [
+    "xsd:string"
+  ],
+  "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_address\u003e": [
+    "xsd:string"
+  ],
+  "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#hasTestAxiom\u003e": [
+    "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#bb\u003e"
+  ]
+}

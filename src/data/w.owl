@@ -1,0 +1,1145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:SEMANCO="http://semanco-tools.eu/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12">
+        <owl:imports rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/HEAD/SEMANCO-HEAD.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time#2016"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/AccessType -->
+
+    <rdfs:Datatype rdf:about="http://purl.org/dc/elements/1.1/AccessType"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAddress">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#addressValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAge -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAge">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingAge"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBottom_Floor_Area -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBottom_Floor_Area">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#bottom_Floor_AreaValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Cadastral_Data -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Cadastral_Data">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#cadastral_AreaValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Floor_Area -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Floor_Area">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_Floor_AreaValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Name -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Name">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Building_Name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Use -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Use">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_UseValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#IsInClimateOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#IsInClimateOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasEnergyConsumption -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasEnergyConsumption"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasFacilities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasFacilities">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasFacilities"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasInteriorEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasInteriorEquipment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#InteriorEquipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasShell -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#hasShell">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isEnergyConsumptionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isEnergyConsumptionOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isFacilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isFacilityOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isInteriorEquipmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isInteriorEquipmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#InteriorEquipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isShellOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isShellOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#addressValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#addressValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#bottom_Floor_AreaValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#bottom_Floor_AreaValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_Floor_AreaValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_Floor_AreaValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_UseValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_UseValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#cadastral_AreaValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#cadastral_AreaValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_In_Fuel_PovertyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_In_Fuel_PovertyValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_TotalValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_TotalValue">
+        <rdfs:subPropertyOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_In_Fuel_PovertyValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_On_Surface_TypeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_On_Surface_TypeValue"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_TypeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_TypeValue">
+        <rdfs:subPropertyOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_On_Surface_TypeValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#AccessType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#AccessType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Private</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Protected</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Public</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingAge"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingVolume">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#COP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#COP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Capacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#ConsumedEnergy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#ConsumedEnergy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#DepthOfCanopy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#DepthOfCanopy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Canopy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Direction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Direction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Building_toBe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#EC_Amount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#EC_Amount">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Floor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Floor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Form -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Form">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Building_toBe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TransparentWall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#GlassType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#GlassType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TransparentWall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#HTC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#HTC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Floor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#GlassType"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Roof"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Wall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#LT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#LT">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#GlassType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#LumenPerWatt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#LumenPerWatt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NameOfInteriorEquipment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NameOfInteriorEquipment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#InteriorEquipment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfEquipment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfEquipment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#InteriorEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfFacilities_Electrical -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfFacilities_Electrical">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfInteriorEquipment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfInteriorEquipment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfUsers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfUsers">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#OperationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#OperationType">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Permanent</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Temporary</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Power -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Power">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#RC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#RC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Floor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Roof"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Wall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#RTC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#RTC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#GlassType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Roof -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Roof">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#SAC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#SAC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Floor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Roof"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Wall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Floor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Roof"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Wall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#UsefulAreaOfBuilding -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#UsefulAreaOfBuilding">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#UtilizationHours -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#UtilizationHours">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#VentilationRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#VentilationRate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Wall -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Wall">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Building_Name -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Building_Name"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Building -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Building_asIS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Building_asIS">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:comment>Those buildings that have been built and used for at least 3 years</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Building_toBe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Building_toBe">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Direction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Form"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Those buildings that are not yet implemented and are being designed, and the modifications are low and sometimes cost-effective.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Canopy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Canopy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Direction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate">
+        <rdfs:comment>The climate in the long run is the dominant climate in a locality.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Electrical_Heating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Electrical_Heating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Electrical_Lighting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Electrical_Lighting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#isFacilityOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Electrical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#ConsumedEnergy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#LumenPerWatt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfFacilities_Electrical"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#UtilizationHours"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#InteriorEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#InteriorEquipment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#ConsumedEnergy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NumOfInteriorEquipment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_AirConditioning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_AirConditioning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Power"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#VentilationRate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_Cooling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_Cooling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingVolume"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#COP"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Capacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Power"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_Heating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_Heating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Facilities_Mechanical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#BuildingVolume"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#COP"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Capacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Power"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonResidential -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonResidential">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:comment>Buildings that do not have a residential property and include: administrative, commercial, sports, educational, medical, and so on.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Residential -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Residential">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:comment>Buildings whose internal activity is residential and used throughout the day.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TransparentWall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TransparentWall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Shell"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Frame"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#GlassType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Seal"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Administrative -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Administrative">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonResidential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Apartment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Apartment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Commercial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Commercial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonResidential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Continental -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Continental">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Cultural -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Cultural">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonResidential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Dry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Light_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Light_Sensor">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Moderate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Moderate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Remedial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Remedial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonResidential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Temperature_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Temperature_Sensor">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Tropical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Tropical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Villa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Villa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Residential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Warm_and_dry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Warm_and_dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Climate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Canopy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#NonTransparentWall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#TransparentWall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_AirConditioning"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_Cooling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12#Mechanical_Heating"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Openllet :: Examples
+Bundle-Description: Examples of Openllet Usage
+Implementation-Version: 2.6.4
+Built-By: User
+Specification-Title: Openllet :: Examples
+Implementation-Vendor-Id: com.github.galigator.openllet
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_144
+Specification-Version: 2.6.4
+

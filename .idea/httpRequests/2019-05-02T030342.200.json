@@ -1,0 +1,13 @@
+{
+  "http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#sp2": {
+    "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_address\u003e": [
+      "xsd:string"
+    ]
+  },
+  "http://www.w3.org/2002/07/owl#Thing": {},
+  "http://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#superTest": {
+    "\u003chttp://www.semanticweb.org/user/ontologies/2019/3/untitled-ontology-45#has_age\u003e": [
+      "xsd:int"
+    ]
+  }
+}

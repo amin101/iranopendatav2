@@ -1,0 +1,980 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12">
+    <Prefix name="" IRI="http://www.semanticweb.org/administrator/ontologies/2019/3/untitled-ontology-12"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/HEAD/SEMANCO-HEAD.owl</Import>
+    <Import>http://www.w3.org/2006/time#2016</Import>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Declaration>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building_asIS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building_toBe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Canopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Climate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electrical_Heating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electrical_Lighting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facilities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facilities_Electrical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facilities_Mechanical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InteriorEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanical_AirConditioning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanical_Cooling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanical_Heating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonResidential"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonTransparentWall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Residential"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransparentWall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsInClimateOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEnergyConsumption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFacilities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInteriorEquipment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasShell"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEnergyConsumptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFacilityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInteriorEquipmentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isShellOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AccessType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BuildingAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BuildingName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BuildingVolume"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#COP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Capacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ConsumedEnergy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DepthOfCanopy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Direction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#EC_Amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Floor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Form"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Frame"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#GlassType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HTC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#LT"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#LumenPerWatt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NameOfInteriorEquipment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NumOfEquipment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NumOfFacilities_Electrical"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NumOfInteriorEquipment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NumOfUsers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OperationType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Power"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#RC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#RTC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Roof"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#SAC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Seal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#UsefulAreaOfBuilding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#UtilizationHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#VentilationRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Wall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Administrative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Apartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Commercial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Continental"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cultural"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Light_Sensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moderate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Remedial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temperature_Sensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tropical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Villa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Warm_and_dry"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://purl.org/dc/elements/1.1/AccessType"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Building_asIS"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building_toBe"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building_toBe"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Direction"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building_toBe"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Form"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Canopy"/>
+        <Class IRI="#Shell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Canopy"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Direction"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_Heating"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_Lighting"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isFacilityOf"/>
+            <Class IRI="#Facilities"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities_Electrical"/>
+        <Class IRI="#Facilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities_Electrical"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#ConsumedEnergy"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities_Electrical"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#LumenPerWatt"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities_Electrical"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#NumOfFacilities_Electrical"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities_Electrical"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#UtilizationHours"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facilities_Mechanical"/>
+        <Class IRI="#Facilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InteriorEquipment"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#ConsumedEnergy"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InteriorEquipment"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#NumOfInteriorEquipment"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_AirConditioning"/>
+        <Class IRI="#Facilities_Mechanical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_AirConditioning"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Power"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_AirConditioning"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#VentilationRate"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Cooling"/>
+        <Class IRI="#Facilities_Mechanical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Cooling"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#BuildingVolume"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Cooling"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#COP"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Cooling"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Capacity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Cooling"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Power"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Heating"/>
+        <Class IRI="#Facilities_Mechanical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Heating"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#BuildingVolume"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Heating"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#COP"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Heating"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Capacity"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mechanical_Heating"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Power"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonResidential"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonTransparentWall"/>
+        <Class IRI="#Shell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Residential"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransparentWall"/>
+        <Class IRI="#Shell"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransparentWall"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Frame"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransparentWall"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#GlassType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransparentWall"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#Seal"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Canopy"/>
+        <Class IRI="#NonTransparentWall"/>
+        <Class IRI="#TransparentWall"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mechanical_AirConditioning"/>
+        <Class IRI="#Mechanical_Cooling"/>
+        <Class IRI="#Mechanical_Heating"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#NonResidential"/>
+        <NamedIndividual IRI="#Administrative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Residential"/>
+        <NamedIndividual IRI="#Apartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonResidential"/>
+        <NamedIndividual IRI="#Commercial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climate"/>
+        <NamedIndividual IRI="#Continental"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonResidential"/>
+        <NamedIndividual IRI="#Cultural"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climate"/>
+        <NamedIndividual IRI="#Dry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#Light_Sensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climate"/>
+        <NamedIndividual IRI="#Moderate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonResidential"/>
+        <NamedIndividual IRI="#Remedial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#Temperature_Sensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climate"/>
+        <NamedIndividual IRI="#Tropical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Residential"/>
+        <NamedIndividual IRI="#Villa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Climate"/>
+        <NamedIndividual IRI="#Warm_and_dry"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInteriorEquipment"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isInteriorEquipmentOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAddress"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAge"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBottom_Floor_Area"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Cadastral_Data"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Floor_Area"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Name"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Use"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFacilityOf"/>
+        <Class IRI="#Facilities"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInteriorEquipmentOf"/>
+        <Class IRI="#InteriorEquipment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isShellOf"/>
+        <Class IRI="#Shell"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAddress"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#addressValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAge"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#BuildingAge"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBottom_Floor_Area"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#bottom_Floor_AreaValue"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Cadastral_Data"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#cadastral_AreaValue"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Floor_Area"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_Floor_AreaValue"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Name"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Building_Name"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasBuilding_Use"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#building_UseValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsInClimateOf"/>
+        <Class IRI="#Climate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFacilities"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFacilities"/>
+            <Class IRI="#Facilities"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInteriorEquipment"/>
+        <Class IRI="#InteriorEquipment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasShell"/>
+        <Class IRI="#Shell"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_TotalValue"/>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#population_Number_Of_Households_In_Fuel_PovertyValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_TypeValue"/>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#solar_Irradiation_On_Surface_TypeValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#AccessType"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#BuildingVolume"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#COP"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Capacity"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#DepthOfCanopy"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#HTC"/>
+        <DataProperty IRI="#Floor"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#HTC"/>
+        <DataProperty IRI="#Frame"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#HTC"/>
+        <DataProperty IRI="#GlassType"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#HTC"/>
+        <DataProperty IRI="#Roof"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#HTC"/>
+        <DataProperty IRI="#Seal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#HTC"/>
+        <DataProperty IRI="#Wall"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#LT"/>
+        <DataProperty IRI="#GlassType"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#NameOfInteriorEquipment"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#NumOfEquipment"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Power"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#RC"/>
+        <DataProperty IRI="#Floor"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#RC"/>
+        <DataProperty IRI="#Frame"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#RC"/>
+        <DataProperty IRI="#Roof"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#RC"/>
+        <DataProperty IRI="#Seal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#RC"/>
+        <DataProperty IRI="#Wall"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#RTC"/>
+        <DataProperty IRI="#GlassType"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#SAC"/>
+        <DataProperty IRI="#Floor"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#SAC"/>
+        <DataProperty IRI="#Frame"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#SAC"/>
+        <DataProperty IRI="#Roof"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#SAC"/>
+        <DataProperty IRI="#Seal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#SAC"/>
+        <DataProperty IRI="#Wall"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#TI"/>
+        <DataProperty IRI="#Floor"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#TI"/>
+        <DataProperty IRI="#Frame"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#TI"/>
+        <DataProperty IRI="#Roof"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#TI"/>
+        <DataProperty IRI="#Seal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#TI"/>
+        <DataProperty IRI="#Wall"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#UsefulAreaOfBuilding"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#COP"/>
+        <Class IRI="#Facilities_Mechanical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ConsumedEnergy"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DepthOfCanopy"/>
+        <Class IRI="#Canopy"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Direction"/>
+        <Class IRI="#Building_toBe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Floor"/>
+        <Class IRI="#NonTransparentWall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Form"/>
+        <Class IRI="#Building_toBe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Frame"/>
+        <Class IRI="#TransparentWall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#GlassType"/>
+        <Class IRI="#TransparentWall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#LumenPerWatt"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NameOfInteriorEquipment"/>
+        <Class IRI="#InteriorEquipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NumOfEquipment"/>
+        <Class IRI="#InteriorEquipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NumOfFacilities_Electrical"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NumOfInteriorEquipment"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Power"/>
+        <Class IRI="#Facilities_Mechanical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Roof"/>
+        <Class IRI="#NonTransparentWall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Seal"/>
+        <Class IRI="#NonTransparentWall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#UtilizationHours"/>
+        <Class IRI="#Facilities_Electrical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Wall"/>
+        <Class IRI="#NonTransparentWall"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AccessType"/>
+        <DataOneOf>
+            <Literal>Private</Literal>
+            <Literal>Protected</Literal>
+            <Literal>Public</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BuildingVolume"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#COP"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Capacity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DepthOfCanopy"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Direction"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#EC_Amount"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Form"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#GlassType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#HTC"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#LT"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NumOfEquipment"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NumOfUsers"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#OperationType"/>
+        <DataOneOf>
+            <Literal>Permanent</Literal>
+            <Literal>Temporary</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Power"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#RTC"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#UsefulAreaOfBuilding"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#VentilationRate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Building_asIS</IRI>
+        <Literal>Those buildings that have been built and used for at least 3 years</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Building_toBe</IRI>
+        <Literal>Those buildings that are not yet implemented and are being designed, and the modifications are low and sometimes cost-effective.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Climate</IRI>
+        <Literal>The climate in the long run is the dominant climate in a locality.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NonResidential</IRI>
+        <Literal>Buildings that do not have a residential property and include: administrative, commercial, sports, educational, medical, and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Residential</IRI>
+        <Literal>Buildings whose internal activity is residential and used throughout the day.</Literal>
+    </AnnotationAssertion>
+    <DatatypeDefinition>
+        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DatatypeDefinition>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

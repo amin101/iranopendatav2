@@ -1,0 +1,133 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.galigator.openllet</groupId>
+        <artifactId>openllet-parent</artifactId>
+        <version>2.6.4</version>
+    </parent>
+    <artifactId>openllet-examples</artifactId>
+    <name>Openllet :: Examples</name>
+    <description>Examples of Openllet Usage</description>
+    <dependencies>
+        <!--		<dependency>-->
+        <!--			<groupId>${project.groupId}</groupId>-->
+        <!--			<artifactId>openllet-jena</artifactId>-->
+        <!--			<version>${project.version}</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>${project.groupId}</groupId>-->
+        <!--			<artifactId>openllet-owlapi</artifactId>-->
+        <!--			<version>${project.version}</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>${project.groupId}</groupId>-->
+        <!--			<artifactId>openllet-modularity</artifactId>-->
+        <!--			<version>${project.version}</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>${project.groupId}</groupId>-->
+        <!--			<artifactId>openllet-explanation</artifactId>-->
+        <!--			<version>${project.version}</version>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--		  <groupId>org.eclipse.jetty</groupId>-->
+        <!--		  <artifactId>jetty-server</artifactId>-->
+        <!--		</dependency>-->
+        <!--		<dependency>-->
+        <!--			<groupId>junit</groupId>-->
+        <!--			<artifactId>junit</artifactId>-->
+        <!--			<scope>test</scope>-->
+        <!--		</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <!--        <dependency>-->
+        <!--            <groupId> org.apache.cassandra</groupId>-->
+        <!--            <artifactId>cassandra-all</artifactId>-->
+        <!--            <version>0.8.1</version>-->
+
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>org.slf4j</groupId>-->
+        <!--                    <artifactId>slf4j-log4j12</artifactId>-->
+        <!--                </exclusion>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>log4j</groupId>-->
+        <!--                    <artifactId>log4j</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlapi-distribution</artifactId>
+            <version>5.1.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.galigator.openllet</groupId>
+            <artifactId>openllet-jena</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.galigator.openllet</groupId>
+            <artifactId>openllet-owlapi</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.galigator.openllet</groupId>
+            <artifactId>openllet-modularity</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.galigator.openllet</groupId>
+            <artifactId>openllet-explanation</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.apache.cassandra</groupId>
+            <artifactId>cassandra-all</artifactId>
+            <version>0.8.1</version>
+
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+    </dependencies>
+</project>
