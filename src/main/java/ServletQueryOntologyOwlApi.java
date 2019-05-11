@@ -1,15 +1,12 @@
-import com.google.gson.Gson;
+
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 public class ServletQueryOntologyOwlApi extends HttpServlet {
     private QueryOntologyOwlApiOntology vocabulary;
@@ -28,9 +25,9 @@ public class ServletQueryOntologyOwlApi extends HttpServlet {
         }
 
         try {
-            vocabulary = new QueryOntologyOwlApiOntology("data/pizza.owl");
+            vocabulary = new QueryOntologyOwlApiOntology("data/domain1.owl");
             response.getWriter().write(vocabulary.queryByClassName(param));
-        } catch (OWLOntologyCreationException e) {
+        } catch (OWLOntologyCreationException | OWLOntologyStorageException e) {
             e.printStackTrace();
         }
     }

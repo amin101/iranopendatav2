@@ -1,3 +1,4 @@
+
 import com.google.gson.Gson;
 
 
@@ -23,7 +24,7 @@ public class ServletQueryOntology extends HttpServlet {
             response.getWriter().write("0");
             return;
         }
-        QueryOntology vocabulary = new QueryOntology("data/pizza.owl");
+        QueryOntology vocabulary = new QueryOntology("data/domain1.owl");
         ArrayList ontClasses = vocabulary.queryByClassName(param);
         Iterator ontClassesIterator = ontClasses.iterator();
 

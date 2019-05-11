@@ -1,16 +1,20 @@
+
+
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import com.google.gson.Gson;
 import openllet.owlapi.OpenlletReasoner;
 import openllet.owlapi.OpenlletReasonerFactory;
-import org.mortbay.util.MultiMap;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.Node;
 import org.semanticweb.owlapi.reasoner.NodeSet;
+import org.semanticweb.owlapi.util.SimpleIRIMapper;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -24,17 +28,39 @@ public class QueryOntologyOwlApiOntology {
     private OWLClass cls;
     private NodeSet<OWLClass> superClasses;
 
-    QueryOntologyOwlApiOntology(String ont) throws FileNotFoundException, OWLOntologyCreationException {
+    QueryOntologyOwlApiOntology(String ont) throws IOException, OWLOntologyCreationException, OWLOntologyStorageException {
         manager = OWLManager.createOWLOntologyManager();
-        ontology = manager.loadOntologyFromOntologyDocument(new File(getRelativeResourcePath(ont)));
         factory = manager.getOWLDataFactory();
+        //   manager.getIRIMappers().add(new SimpleIRIMapper(IRI.create("http://www.co-ode.org/ontologies/pizza/2.0.0"),
+        //        IRI.create("C:\\Users\\User\\Desktop\\iranopendatav2\\src\\data\\ee.owl")));
+
+        ontology = manager.loadOntologyFromOntologyDocument(new File(getRelativeResourcePath(ont)));
+        //  System.out.println(getRelativeResourcePath(ont));
+        //OWLOntology ontology2 = manager.loadOntologyFromOntologyDocument(new File(getRelativeResourcePath("../../data/pizza.owl")));
+
+//System.out.println(ontology2.getOntologyID().getOntologyIRI().get());
+
+        //  OWLImportsDeclaration im = factory.getOWLImportsDeclaration(IRI.create("file:C:\\Users\\User\\Desktop\\iranopendatav2\\src\\data\\pizza.owl"));
+        //   manager.applyChange(new AddImport(ontology,im));
+//
+//        File file = File.createTempFile("owlapiexamples", "saving.owl");
+//        System.out.println(file);
+//        manager.saveOntology(ontology, IRI.create(file.toURI()));
+
+        // manager.saveOntology(ontology,new FileOutputStream(new File("C:\\Users\\User\\Desktop\\iranopendatav2\\src\\data\\qq.owl")));
         reasoner = OpenlletReasonerFactory.getInstance().createReasoner(ontology);
+
+        //*********************
+        Set<OWLClass> allCls = ontology.getClassesInSignature(true);
+        allCls.forEach(System.out::println);
+
+        //*********************
 
     }
 
-    public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException {
-        QueryOntologyOwlApiOntology app = new QueryOntologyOwlApiOntology("data/pizza.owl");
-        app.queryByClassName("test");
+    public static void main(String[] args) throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
+        QueryOntologyOwlApiOntology app = new QueryOntologyOwlApiOntology("data/family_v2.owl");
+        //   app.queryByClassName("test");
 
     }
 
@@ -62,20 +88,31 @@ public class QueryOntologyOwlApiOntology {
             superClasses = getSuperClassesFromReasoner(oc.toStringID());
             ArrayList<Map> cp = new ArrayList<>();
             //  clsAndPropAndPropValue.put(cls.toStringID(),PrintClassAxioms(cls));
-
+            //  Map sp = new HashMap<String,NodeSet<OWLClass>>();
+            ArrayList<String> superclassesArrayList = new ArrayList<String>();
+            // sp.put("superclasses",superClasses);
+            // cp.add(sp);
             //now print cls super classes axioms
             for (Node<OWLClass> m : superClasses) {
+
                 // System.out.println("class::::::::: " + m);
                 OWLClass pCls = m.getRepresentativeElement();
+                superclassesArrayList.add(pCls.toString());
                 Map<String, Collection<ArrayList<String>>> classAxiom = PrintClassAxioms(pCls).asMap();
 
                 if (classAxiom.size() > 0) cp.add(classAxiom);
             }
+
+            Map<String, ArrayList> spMap = new HashMap<>();
+            spMap.put("superclasses", superclassesArrayList);
+            cp.add(spMap);
+
+
             cp.add((PrintClassAxioms(oc)).asMap());
 
-            cp.forEach(x -> System.out.println("$$$$$" + x));
+            //  cp.forEach(x -> System.out.println("$$$$$" + x));
             clsAndPropAndPropValue.put(oc.toStringID(), cp);
-            clsAndPropAndPropValue.forEach((x, y) -> System.out.println("####" + x + "****" + y + "***"));
+            //  clsAndPropAndPropValue.forEach((x, y) -> System.out.println("####" + x + "****" + y + "***"));
         }
 
 
