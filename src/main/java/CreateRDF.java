@@ -1,5 +1,4 @@
 
-import com.sun.deploy.ref.AppRef;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -11,30 +10,20 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CreateRDF {
+public class CreateRDF extends RDFMaker {
 
 
     Model model;
     OntModel vocabularyModel;
-    Map<String, String> FORMATS = new HashMap<>();
+
 
     public CreateRDF(String vocabularyDir, String resource, Map<String, String[]> rdfData) {
         //create Model
 
-        FORMATS.put("Turtle", "ttl");
-        FORMATS.put("N-Triples", "nt");
-        FORMATS.put("N-Quads", "nq");
-        FORMATS.put("TriG", "trig");
-        FORMATS.put("RDF/XML", "rdf");
-        FORMATS.put("JSON-LD", "jsonld");
-        FORMATS.put("RDF Thrift", "trdf");
-        FORMATS.put("RDF/JSON", "rj");
-        FORMATS.put("TriX", "trix");
 
         vocabularyModel = ModelFactory.createOntologyModel();
 
@@ -63,6 +52,11 @@ public class CreateRDF {
 
             }
         }
+    }
+
+    @Override
+    public Model getModel() {
+        return model;
     }
 
     //Types are: "Turtle","N-Triples","N-Quads","TriG","RDF/XML","JSON-LD","RDF Thrift","RDF/JSON","TriX"

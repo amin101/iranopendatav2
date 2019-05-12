@@ -3,20 +3,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Map;
-
-public class TestParseJSON {
+public class ParseJSON {
 
     private Gson gson;
-    private String fileLocation = "";
+    private String file = "";
 //file location  = "C:\\Users\\User\\Desktop\\iranopendatav2\\src\\data\\dataset.json"
 
-    public TestParseJSON(String fileLocation) {
+    public ParseJSON(String file) {
         gson = new Gson();
-        this.fileLocation = fileLocation;
+        this.file = file;
     }
 
     public static void main(String[] args) {
@@ -28,24 +23,33 @@ public class TestParseJSON {
 
     public JsonElement getJsonElement() {
 
-        FileReader myJSON = null;
-        try {
-            myJSON = new FileReader(fileLocation);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return gson.fromJson(myJSON, JsonElement.class);
+//        FileReader myJSON = null;
+//        try {
+//            myJSON = new FileReader(file);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+
+
+        return gson.fromJson(file, JsonElement.class);
     }
 
     public JsonArray getMetaData() {
 
         JsonArray metadata = getJsonElement().getAsJsonObject().get("metadata").getAsJsonArray();
+
         return metadata;
     }
 
     public JsonArray getData() {
 
         JsonArray data = getJsonElement().getAsJsonObject().get("data").getAsJsonArray();
+        return data;
+    }
+
+    public String getResource() {
+
+        String data = getJsonElement().getAsJsonObject().get("resource").getAsString();
         return data;
     }
 
